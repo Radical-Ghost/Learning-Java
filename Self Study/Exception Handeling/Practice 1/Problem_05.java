@@ -10,7 +10,7 @@
 // nestedExceptionHandling("10", "0", arr, 5) // arr[] = {1, 2, 3}
 // Output: "Error: Division by zero and index out of bounds"
 
-public class Five {
+public class Problem_05 {
     public static String nestedExceptionHandling(String s1, String s2, int[] arr, int index) {
         boolean divError = false;
         boolean indexError = false;

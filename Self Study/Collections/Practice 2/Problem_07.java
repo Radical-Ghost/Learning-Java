@@ -15,7 +15,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Scanner;
 
-public class Seven {
+public class Problem_07 {
     public static void main(String[] args) {
         int n;
         List<String> lst = new ArrayList<>();

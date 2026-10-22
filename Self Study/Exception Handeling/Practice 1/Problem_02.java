@@ -10,7 +10,7 @@
 // Output: "Error: Division by zero"
 
 
-public class Two {
+public class Problem_02 {
     public static void calculateAverage(int[] arr) {
         try {
             int sum = 0;

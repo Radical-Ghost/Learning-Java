@@ -10,7 +10,7 @@
 // getStringLength(null)
 // Output: "Error: Null value passed"
 
-public class One {
+public class Problem_01 {
     public static Object getStringLength(String s) {
         try {
             return s.length();

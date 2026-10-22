@@ -14,7 +14,7 @@
 import java.util.List;
 import java.util.ArrayList;
 
-public class Two {
+public class Problem_02 {
     public static List<Integer> mergeList(List<Integer> arr, List<Integer> arr1) {
         for (int i : arr1) if (!arr.contains(i)) arr.add(i);
         return arr;

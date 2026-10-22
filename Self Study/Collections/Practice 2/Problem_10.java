@@ -32,7 +32,7 @@ import java.util.LinkedHashMap;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class Ten {
+public class Problem_10 {
     public static void printResult(int unique, List<Integer> freq, int n) {
         System.out.println(unique);
         Collections.sort(freq, Collections.reverseOrder());

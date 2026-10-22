@@ -17,7 +17,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Six {
+public class Problem_06 {
     public static void numberSegregator(String text) {
         try {
             List<Integer> numbers = new ArrayList<>();

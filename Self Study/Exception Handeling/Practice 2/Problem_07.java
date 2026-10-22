@@ -23,7 +23,7 @@
 
 import java.util.Scanner;
 
-public class Seven {
+public class Problem_07 {
 
     public static double calculateSum(int[] arr) {
         double sum = 0.0;

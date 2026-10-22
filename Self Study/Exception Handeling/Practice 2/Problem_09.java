@@ -23,7 +23,7 @@ class NoOddNumberException extends Exception {
     }
 }
 
-public class Nine {
+public class Problem_09 {
     public static List<Integer> findOddSquares(List<Integer> numbers) throws NoOddNumberException {
         List<Integer> odd = new ArrayList<>();
 

@@ -13,7 +13,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class Five {
+public class Problem_05 {
     public static Set<Integer> findSetIntersection (Set<Integer> s1, Set<Integer> s2) {
         // Set<Integer> intersection = new HashSet<>(s1);
         // intersection.retainAll(s2);

@@ -13,7 +13,7 @@ import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Eight {
+public class Problem_08 {
     public static void main(String[] args) {
         List<Integer> lst1 = new ArrayList<>();
         List<Integer> lst2 = new ArrayList<>();

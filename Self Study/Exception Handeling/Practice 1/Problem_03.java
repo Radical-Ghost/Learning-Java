@@ -17,7 +17,7 @@ class InvalidAgeException extends Exception {
     }
 }
 
-public class Three {
+public class Problem_03 {
     public static String checkAge(int age) throws InvalidAgeException {
         if (age < 18) throw new InvalidAgeException("InvalidAgeException: Age must be 18 or above");
         return "Eligible";

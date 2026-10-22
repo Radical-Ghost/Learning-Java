@@ -19,7 +19,7 @@ class FewEelementsException extends Exception {
     }
 }
 
-public class One {
+public class Problem_01 {
     public static Integer findSecondLargest(List<Integer> arr) throws FewEelementsException {
         int fir = 0;
         int sec = 0;

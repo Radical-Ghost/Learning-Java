@@ -9,7 +9,7 @@
 // parseAndMultiply("abc")
 // Output: "Error: Invalid input"
 
-public class Four {
+public class Problem_04 {
     public static void parseAndMultiply(String s) {
         try {
             int n = Integer.parseInt(s);

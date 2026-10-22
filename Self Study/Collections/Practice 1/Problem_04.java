@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Four {
+public class Problem_04 {
     public static List<String> reverseList (List<String> arr) {
         List<String> rev = new ArrayList<>(arr);
         Collections.reverse(rev);

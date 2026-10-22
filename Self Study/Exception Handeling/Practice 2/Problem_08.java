@@ -23,7 +23,7 @@ class NoSpecialCharaException extends Exception {
     }
 }
 
-public class Eight {
+public class Problem_08 {
     public static List<Character> specialCharacterCounter(String str) throws NoSpecialCharaException {
         List<Character> spl = new ArrayList<>();
         for (char s : str.toCharArray()) {

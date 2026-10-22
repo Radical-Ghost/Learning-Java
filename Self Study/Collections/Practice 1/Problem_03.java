@@ -14,7 +14,7 @@
 import java.util.LinkedHashMap;
 import java.util.List;
 
-public class Three {
+public class Problem_03 {
     public static LinkedHashMap<String, Integer> countFrequency (List<String> words) {
         LinkedHashMap<String, Integer> map = new LinkedHashMap<>();
 

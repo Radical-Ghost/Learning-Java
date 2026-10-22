@@ -23,7 +23,7 @@ class NoPrimeNumberException extends Exception {
     }
 }
 
-public class Ten {
+public class Problem_10 {
     public static boolean isPrime (int n) {
         if (n <= 1) return false;
         if (n == 2) return true;

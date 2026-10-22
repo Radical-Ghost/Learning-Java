@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Six {
+public class Problem_06 {
     public static void main(String[] args) {
         List<Integer> arr = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
