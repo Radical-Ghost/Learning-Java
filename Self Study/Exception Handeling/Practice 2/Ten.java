@@ -1,0 +1,47 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class NoPrimeNumberException extends Exception {
+    public NoPrimeNumberException (String msg) {
+        super(msg);
+    }
+}
+
+public class Ten {
+    public static boolean isPrime (int n) {
+        if (n <= 1) return false;
+        if (n == 2) return true;
+        if (n % 2 == 0) return false;
+
+        for (int i = 3; i * i <= n; i += 2) if (n % i == 0) return false;
+
+        return true;
+    }
+
+    public static List<Integer> findPrimeCubes(List<Integer> nums) throws NoPrimeNumberException {
+        List<Integer> cubes = new ArrayList<>();
+
+        for (int i : nums) if (isPrime(i)) cubes.add(i * i * i);
+
+        if (cubes.isEmpty()) throw new NoPrimeNumberException("No Prime Number Found");
+
+        return cubes;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> numbers1 = List.of(1, 2, 3, 4, 5);
+        List<Integer> numbers2 = List.of(0, 1, 4, 6);
+
+        try {
+            System.out.println(findPrimeCubes(numbers1));
+        } catch (NoPrimeNumberException e){
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            System.out.println(findPrimeCubes(numbers2));
+        } catch (NoPrimeNumberException e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
