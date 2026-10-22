@@ -1,3 +1,16 @@
+// Question 2: Merge Two Lists Without Duplicates Write a method mergeLists that takes two List<Integer> and returns a new list containing all elements from both lists without any duplicates. Maintain the order of elements from both lists.
+
+// Sample Input 1:
+
+// mergeLists([1, 2, 3], [3, 4, 5])
+// Output: [1, 2, 3, 4, 5]
+
+// Sample Input 2:
+
+// mergeLists([10, 20], [30, 40])
+// Output: [10, 20, 30, 40]
+
+
 import java.util.List;
 import java.util.ArrayList;
 

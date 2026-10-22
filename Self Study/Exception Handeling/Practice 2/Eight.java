@@ -1,3 +1,19 @@
+// 3. Ravi is given a String which contains alphabets and some special characters.
+// He must implement a method specialCharacterCounter(String s) to count the special characters in the string and store them in a List.
+// If the String doesn't contain any special characters, the method should throw a "No Special Character Found" exception.
+
+// Sample Input 1:
+// "hello@world!"
+
+// Sample Output 1:
+// [@, !]
+
+// Sample Input 2:
+// "helloworld"
+
+// Sample Output 2:
+// No Special Character Found
+
 import java.util.ArrayList;
 import java.util.List;
 

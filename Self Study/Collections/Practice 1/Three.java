@@ -1,3 +1,16 @@
+// Question 3: Count Frequency of Each Element in a List Write a method countFrequency that takes a List<String> and returns a Map<String, Integer> where each key is a string from the list and the value is the count of occurrences of that string.
+
+// Sample Input 1:
+
+// countFrequency(["apple", "banana", "apple", "orange", "banana", "apple"])
+// Output: {apple=3, banana=2, orange=1}
+
+// Sample Input 2:
+
+// countFrequency(["cat", "dog", "cat", "dog", "cat"])
+// Output: {cat=3, dog=2}
+
+
 import java.util.LinkedHashMap;
 import java.util.List;
 

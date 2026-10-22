@@ -1,3 +1,15 @@
+// Question 1: Find the Second Largest Element in a List Write a method findSecondLargest that takes a List<Integer> and returns the second largest element in the list. Handle cases where the list has fewer than two elements by returning an appropriate message.
+
+// Sample Input 1:
+
+// findSecondLargest([10, 20, 30, 40, 50])
+// Output: 40
+
+// Sample Input 2:
+
+// findSecondLargest([5])
+// Output: "Error: List has fewer than two elements"
+
 import java.util.List;
 import java.util.ArrayList;
 

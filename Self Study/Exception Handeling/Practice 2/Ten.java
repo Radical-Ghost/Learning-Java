@@ -1,3 +1,19 @@
+// 5. Vikram is given a list of integers.
+// He needs to implement a method findPrimeCubes(List<Integer> numbers) that returns a list of cubes of all prime numbers from the list.
+// If no prime number is found, the method should throw a "No Prime Number Found" exception.
+
+// Sample Input 1:
+// [2, 3, 4, 5, 6]
+
+// Sample Output 1:
+// [8, 27, 125]
+
+// Sample Input 2:
+// [4, 6, 8, 9]
+
+// Sample Output 2:
+// No Prime Number Found
+
 import java.util.ArrayList;
 import java.util.List;
 
