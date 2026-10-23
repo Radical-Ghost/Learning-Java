@@ -48,5 +48,6 @@ public class Problem_08 {
             String word = words[i];
             if (isAlternating(word)) System.out.println(word);
         }
+        sc.close();
     }
 }

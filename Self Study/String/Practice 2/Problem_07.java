@@ -38,5 +38,7 @@ public class Problem_07 {
         }
 
         System.out.println(count);
+
+        sc.close();
     }
 }

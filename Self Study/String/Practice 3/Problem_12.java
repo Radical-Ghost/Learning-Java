@@ -17,13 +17,16 @@ public class Problem_12 {
 
         for (int i = 0; i < parentheses.length; i++) {
             if (parentheses[i] == '(' || parentheses[i] == '[' || parentheses[i] == '{') stack.push(parentheses[i]);
-            else if ((parentheses[i] == ')' && stack.peek() == '(') ||
+            else {
+                if (stack.isEmpty()) return false;
+                if ((parentheses[i] == ')' && stack.peek() == '(') ||
                 (parentheses[i] == ']' && stack.peek() == '[') ||
                 (parentheses[i] == '}' && stack.peek() == '{')) stack.pop();
-            else return false;
+                else return false;
+            }
         }
 
-        return true;
+        return stack.isEmpty();
     }
 
     public static void main(String[] args) {
@@ -32,5 +35,7 @@ public class Problem_12 {
         String s = sc.nextLine();
 
         System.out.println(isValid(s));
+
+        sc.close();
     }
 }

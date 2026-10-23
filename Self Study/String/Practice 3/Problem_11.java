@@ -38,5 +38,6 @@ public class Problem_11 {
 
         System.out.println(lengthOfLongestSubstring(s));
 
+        sc.close();
     }
 }

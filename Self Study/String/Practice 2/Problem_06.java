@@ -41,5 +41,7 @@ public class Problem_06 {
         System.out.println();
 
         for (int i = 0; i < n; i++) if (tokens[i].matches(regex)) System.out.println(tokens[i]);
+
+        sc.close();
     }
 }

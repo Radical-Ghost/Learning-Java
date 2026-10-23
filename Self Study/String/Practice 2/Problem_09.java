@@ -39,5 +39,6 @@ public class Problem_09{
 
             if (vowelCount == 2 && consonantCount == 3) System.out.println(words[i]);
         }
+        sc.close();
     }
 }

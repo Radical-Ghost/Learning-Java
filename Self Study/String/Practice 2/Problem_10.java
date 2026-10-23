@@ -50,5 +50,6 @@ public class Problem_10 {
         }
 
         System.out.println(count);
+        sc.close();
     }
 }
