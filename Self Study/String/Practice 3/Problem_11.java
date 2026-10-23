@@ -4,15 +4,31 @@
 // Sample Input: "abcabcbb"
 // Sample Output: 3 (The longest substring is "abc".)
 
+import java.util.Set;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Problem_11 {
     public static int lengthOfLongestSubstring(String s) {
-        int len = 0;
+        int maxLen = 0;
+        int n = s.length();
+        int left = 0;
 
+        Set<Character> window = new HashSet<>();
 
+        for (int right = 0; right < n; right++) {
+            char ch = s.charAt(right);
 
-        return len;
+            while (window.contains(ch)) {
+                window.remove(s.charAt(left));
+                left++;
+            }
+
+            window.add(ch);
+            maxLen = Math.max(maxLen, right - left + 1);
+        }
+
+        return maxLen;
     }
 
     public static void main(String[] args) {
