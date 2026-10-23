@@ -14,8 +14,7 @@ import java.util.List;
 public class Problem_25 {
     public static List<String> findHexColorCodes(String text) {
         List<String> colors = new ArrayList<>();
-        Pattern pattern = Pattern.compile("#[0-9A-Fa-f]{6}\\b");
-        Matcher matcher = pattern.matcher(text);
+        Matcher matcher = Pattern.compile("#[0-9A-Fa-f]{6}\\b").matcher(text);
 
         while(matcher.find()) colors.add(matcher.group());
 
