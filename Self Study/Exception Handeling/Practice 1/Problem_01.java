@@ -10,6 +10,8 @@
 // getStringLength(null)
 // Output: "Error: Null value passed"
 
+import java.util.Scanner;
+
 public class Problem_01 {
     public static Object getStringLength(String s) {
         try {
@@ -20,7 +22,8 @@ public class Problem_01 {
     }
 
     public static void main(String[] args) {
-        System.out.println(getStringLength("Hello"));
-        System.out.println(getStringLength(null));
+        Scanner sc = new Scanner(System.in);
+        System.out.println(getStringLength(sc.nextLine()));
+        System.out.println(getStringLength(sc.nextLine()));
     }
 }

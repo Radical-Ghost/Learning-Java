@@ -16,6 +16,7 @@
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Problem_06 {
     public static void numberSegregator(String text) {
@@ -41,8 +42,9 @@ public class Problem_06 {
 
 
     public static void main(String[] args) {
-        String text = "dgarg534htyty6758gh56";
-        String text1 = "dgarghtytygh";
+        Scanner sc = new Scanner(System.in);
+        String text = sc.nextLine(); //"dgarg534htyty6758gh56"
+        String text1 = sc.nextLine(); //"dgarghtytygh"
         numberSegregator(text);
         numberSegregator(text1);
     }
