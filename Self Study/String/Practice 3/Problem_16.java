@@ -15,21 +15,13 @@ import java.util.regex.Pattern;
 public class Problem_16 {
 
     public static boolean wordBreak(String s, List<String> wordDict) {
-        if (s == null || s.isEmpty()) return false;
-
         Set<String> dict = new HashSet<>(wordDict);
-        int n = s.length();
-        boolean[] dp = new boolean[n + 1];
+
+        boolean[] dp = new boolean[s.length() + 1];
         dp[0] = true;
 
-        int maxWordLen = 0;
-        for (String word : wordDict) {
-            maxWordLen = Math.max(maxWordLen, word.length());
-        }
-
-        for (int i = 1; i <= n; i++) {
-            // Check substrings s[j...i]
-            for (int j = i - 1; j >= Math.max(0, i - maxWordLen); j--) {
+        for (int i = 1; i <= s.length(); i++) {
+            for (int j = 0; j < i; j++) {
                 if (dp[j] && dict.contains(s.substring(j, i))) {
                     dp[i] = true;
                     break;
@@ -37,35 +29,23 @@ public class Problem_16 {
             }
         }
 
-        return dp[n];
+        return dp[s.length()];
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        if (!sc.hasNextLine()) {
-            sc.close();
-            return;
-        }
+        String input = sc.nextLine();
 
-        String combined = sc.nextLine();
+        Matcher m = Pattern.compile("\"([^\"]+)\"").matcher(input);
+        List<String> words = new ArrayList<>();
 
-        int start = combined.indexOf("\"");
-        int end = combined.indexOf("\"", start + 1);
-        String s = combined.substring(start + 1, end);
-
-        start = combined.indexOf("[");
-        end = combined.lastIndexOf("]");
-        String listPart = combined.substring(start + 1, end);
-
-        List<String> wordDict = new ArrayList<>();
-        Matcher m = Pattern.compile("\"([^\"]+)\"").matcher(listPart);
         while (m.find()) {
-            wordDict.add(m.group(1));
+            words.add(m.group(1));
         }
 
-        boolean result = wordBreak(s, wordDict);
-        System.out.println(result);
+        String s = words.remove(0);
 
+        System.out.println(wordBreak(s, words));
         sc.close();
     }
 }

@@ -7,62 +7,42 @@
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public class Problem_17 {
 
-    public static List<String> permute(String s) {
-        List<String> result = new ArrayList<>();
-        if (s == null || s.isEmpty()) return result;
-
-        char[] chars = s.toCharArray();
-        Arrays.sort(chars); // Sorts characters to handle duplicates and maintain order
-        boolean[] used = new boolean[chars.length];
-
-        backtrack(chars, used, new StringBuilder(), result);
-        return result;
-    }
-
-    private static void backtrack(char[] chars, boolean[] used, StringBuilder current, List<String> result) {
-        if (current.length() == chars.length) {
-            result.add(current.toString());
+    public static void permute(String str, String ans, List<String> result) {
+        if (str.length() == 0) {
+            result.add(ans);
             return;
         }
 
-        for (int i = 0; i < chars.length; i++) {
-            // Skip already selected characters
-            if (used[i]) continue;
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
 
-            // Skip identical adjacent characters to avoid duplicate permutations
-            if (i > 0 && chars[i] == chars[i - 1] && !used[i - 1]) continue;
+            String rem = str.substring(0, i) + str.substring(i+1);
 
-            used[i] = true;
-            current.append(chars[i]);
-
-            backtrack(chars, used, current, result);
-
-            // Backtrack state
-            current.deleteCharAt(current.length() - 1);
-            used[i] = false;
+            permute(rem, ans+ch, result);
         }
+
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        List<String> result = new ArrayList<>();
         if (!sc.hasNextLine()) {
             sc.close();
             return;
         }
 
-        String input = sc.nextLine().trim();
+        String input = sc.nextLine().strip();
         if (input.startsWith("\"") && input.endsWith("\"") && input.length() >= 2) {
             input = input.substring(1, input.length() - 1);
         }
 
-        List<String> permutations = permute(input);
+        permute(input, "", result);
 
-        String formatted = permutations.stream()
+        String formatted = result.stream()
                 .map(p -> "\"" + p + "\"")
                 .collect(Collectors.joining(", ", "[", "]"));
 
